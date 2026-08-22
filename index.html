@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUSI - Portal Unificado de Serviços Internos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">PUSI - Portal Interno</div>
+        <nav class="nav-menu">
+            <button id="btn-sec-novo" class="nav-btn active">Novo Chamado</button>
+            <button id="btn-sec-lista" class="nav-btn">Lista de Chamados</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="secao-formulario" class="page-section">
+            <h2>Abertura de Chamado de Serviço</h2>
+            <p>Preencha os dados abaixo para registrar sua solicitação interna.</p>
+            
+            <form id="form-chamado" novalidate>
+                <div class="form-group">
+                    <label for="titulo">Título do Chamado: *</label>
+                    <input type="text" id="titulo" placeholder="Ex: Manutenção no computador" required>
+                    <span class="error-msg" id="err-titulo"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="setor">Setor Solicitante: *</label>
+                    <select id="setor" required>
+                        <option value="">Selecione um setor...</option>
+                        <option value="Administrativo">Administrativo</option>
+                        <option value="Atendimento">Atendimento</option>
+                        <option value="Operação">Operação</option>
+                    </select>
+                    <span class="error-msg" id="err-setor"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="descricao">Descrição Detalhada: * (Mínimo de 10 caracteres)</label>
+                    <textarea id="descricao" rows="4" placeholder="Descreva brevemente o problema ou necessidade..." required></textarea>
+                    <span class="error-msg" id="err-descricao"></span>
+                </div>
+
+                <button type="submit" class="btn-submit">Registrar Chamado</button>
+            </form>
+            <div id="feedback-sucesso" class="success-msg hidden">
+                ✅ Chamado registrado com sucesso no sistema!
+            </div>
+        </section>
+
+        <section id="secao-listagem" class="page-section hidden">
+            <h2>Acompanhamento de Chamados</h2>
+            <p>Consulte e filtre os chamados registrados no portal.</p>
+
+            <div class="filter-box">
+                <input type="text" id="campo-busca" placeholder="🔍 Filtrar chamados por título ou setor...">
+            </div>
+
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Título</th>
+                            <th>Setor</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela-chamados"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
