@@ -1,16 +1,17 @@
-# Portal Unificado de Serviços Internos (PUSI) - MVP Front-End
+# Protótipo Front-End - Gestão de Chamados
 
-Projeto desenvolvido para a Situação de Aprendizagem 01 (SA01) da Unidade Curricular de Desenvolvimento de Sistemas.
+## Objetivo
+Protótipo desenvolvido para a área administrativa realizar o cadastramento, validação e visualização de chamados.
 
-## 👤 Responsável
+## Como Executar
+1. Clone ou baixe este repositório.
+2. Abre o arquivo `index.html` diretamente no seu navegador de preferência (Google Chrome, Edge, Firefox) ou via extensão Live Server no VS Code.
+
+## Funcionalidades Entregues
+- Formulário com validação de campos obrigatórios e formato.
+- Feedback visual de sucesso e erro ao cadastrar.
+- Renderização dinâmica da lista de chamados.
+- Layout responsivo para telas mobile e desktop.
+
+## Autor
 - Eduardo dos Santos Virgens
-
-## 📌 Links do Projeto
-- **Quadro Kanban (Trello):** http://trello.com/b/TMHKk6VJ/kanban-mvp-front-end
-
-## 🛠️ Tecnologias Utilizadas
-- HTML5
-- CSS3
-- JavaScript
-- Git / GitHub
-- Trello (Gestão Ágil)# mvp-pusi-frontend
